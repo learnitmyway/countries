@@ -1,8 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { FC } from "react";
 import { getAllCountries } from "./countriesApi";
 
-export const Countries: FC = () => {
+export const Countries = () => {
   const query = useQuery({
     queryKey: ["countires"],
     queryFn: getAllCountries,
