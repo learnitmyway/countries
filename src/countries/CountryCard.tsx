@@ -9,7 +9,12 @@ import {
 import { Country } from "./types";
 
 export const CountryCard = ({ country }: { country: Country }) => (
-  <Card>
+  <Card className="w-fit">
+    <img
+      className="h-[150px] w-[250px] object-cover"
+      src={country.flags.png}
+      alt={country.name.common}
+    />
     <CardHeader>
       <CardTitle>{country.name.common}</CardTitle>
       <CardDescription>Card Description</CardDescription>
