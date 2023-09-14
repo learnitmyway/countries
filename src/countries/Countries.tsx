@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { getAllCountries } from "./countriesApi";
+import { CountryCard } from "./CountryCard";
 
 export const Countries = () => {
   const query = useQuery({
@@ -11,7 +12,7 @@ export const Countries = () => {
     <div>
       <ul>
         {query.data?.map((country) => (
-          <li key={country.name.common}>{country.name.common}</li>
+          <CountryCard key={country.name.common} country={country} />
         ))}
       </ul>
     </div>
