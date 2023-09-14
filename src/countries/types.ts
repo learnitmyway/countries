@@ -3,4 +3,5 @@ export type Country = {
   flags: { png: string };
   name: { common: string; official: string };
   population: number;
+  region: string;
 };

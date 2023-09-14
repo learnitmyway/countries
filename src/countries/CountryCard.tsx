@@ -1,11 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Country } from "./types";
 
 export const CountryCard = ({ country }: { country: Country }) => (
@@ -17,13 +10,20 @@ export const CountryCard = ({ country }: { country: Country }) => (
     />
     <CardHeader>
       <CardTitle>{country.name.common}</CardTitle>
-      <CardDescription>Card Description</CardDescription>
     </CardHeader>
     <CardContent>
-      <p>Card Content</p>
+      <p>
+        <span className="font-semibold">Population: </span>
+        {country.population}
+      </p>
+      <p>
+        <span className="font-semibold">Region: </span>
+        {country.region}
+      </p>
+      <p>
+        <span className="font-semibold">Capital: </span>
+        {country.capital}
+      </p>
     </CardContent>
-    <CardFooter>
-      <p>Card Footer</p>
-    </CardFooter>
   </Card>
 );
