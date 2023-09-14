@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Country } from "./types";
 
 export const CountryCard = ({ country }: { country: Country }) => (
-  <Card className="w-fit">
+  <Card className="w-[250px]">
     <img
       className="h-[150px] w-[250px] object-cover"
       src={country.flags.png}
