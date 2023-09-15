@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { getAllCountries } from "./countriesApi";
 import { CountryCard } from "./CountryCard";
+import { Link } from "react-router-dom";
 
 export const Countries = () => {
   const query = useQuery({
@@ -10,15 +11,20 @@ export const Countries = () => {
 
   return (
     <>
-      <div>
-        <div className="flex flex-wrap justify-center">
+      <main>
+        <div className="flex flex-wrap justify-center items-center">
           {query.data?.map((country) => (
-            <div key={country.name.common} className="p-9 flex-none">
-              <CountryCard country={country} />
-            </div>
+            <Link
+              key={country.name.common}
+              to={`/countries/${country.name.common}`}
+            >
+              <div className="p-9 flex-none">
+                <CountryCard country={country} />
+              </div>
+            </Link>
           ))}
         </div>
-      </div>
+      </main>
     </>
   );
 };
