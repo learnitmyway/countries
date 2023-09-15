@@ -9,14 +9,16 @@ export const Countries = () => {
   });
 
   return (
-    <div>
-      <div className="flex flex-wrap justify-center">
-        {query.data?.map((country) => (
-          <div key={country.name.common} className="p-9 flex-none">
-            <CountryCard country={country} />
-          </div>
-        ))}
+    <>
+      <div>
+        <div className="flex flex-wrap justify-center">
+          {query.data?.map((country) => (
+            <div key={country.name.common} className="p-9 flex-none">
+              <CountryCard country={country} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
