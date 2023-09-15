@@ -4,7 +4,7 @@ import { CountryCard } from "./CountryCard";
 
 export const Countries = () => {
   const query = useQuery({
-    queryKey: ["countires"],
+    queryKey: ["countries"],
     queryFn: getAllCountries,
   });
 
