@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Country } from "../types";
+import { joinCapitals } from "./CountryCard.util";
 
 export const CountryCard = ({ country }: { country: Country }) => (
   <Card className="w-[250px]">
@@ -22,7 +23,7 @@ export const CountryCard = ({ country }: { country: Country }) => (
       </p>
       <p>
         <span className="font-semibold">Capital: </span>
-        {country.capital?.join(", ")}
+        {joinCapitals({ capitals: country.capital })}
       </p>
     </CardContent>
   </Card>

@@ -4,15 +4,18 @@
 
 - `npm install`
 - `npm run dev`
+- `npm test`
 
 ## to do
 
 - set up vitest
 - setup circle ci pipeline
   - replace husky?
+    - remove `prepare` script
 - complete detail view
   - consider staleTime
 - add a backend and store countries in db instead
+  - same repo
   - NestJS
   - Prisma
   - script to fetch countries and write to db
