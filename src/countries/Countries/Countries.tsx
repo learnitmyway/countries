@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getAllCountries } from "./countriesApi";
+import { getAllCountries } from "../countriesApi";
 import { CountryCard } from "./CountryCard";
 import { Link } from "react-router-dom";
 

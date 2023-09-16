@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { Countries } from "./countries/Countries";
+import { Countries } from "./countries/Countries/Countries";
 import {
   BrowserRouter as Router,
   Switch,

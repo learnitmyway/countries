@@ -9,6 +9,7 @@
 
 - set up vitest
 - setup circle ci pipeline
+  - replace husky?
 - complete detail view
   - consider staleTime
 - add a backend and store countries in db instead

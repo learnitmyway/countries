@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Country } from "./types";
+import { Country } from "../types";
 
 export const CountryCard = ({ country }: { country: Country }) => (
   <Card className="w-[250px]">
