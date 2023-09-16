@@ -19,6 +19,7 @@ module.exports = {
   },
   plugins: ["react-refresh", "@tanstack/query"],
   rules: {
+    "no-console": "warn",
     "react-refresh/only-export-components": [
       "warn",
       { allowConstantExport: true },
