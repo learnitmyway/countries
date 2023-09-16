@@ -1,27 +1,59 @@
-# React + TypeScript + Vite
+# Countries
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## useful commands
 
-Currently, two official plugins are available:
+- `npm install`
+- `npm run dev`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## to do
 
-## Expanding the ESLint configuration
+- set up vitest
+- setup circle ci pipeline
+- complete detail view
+  - consider staleTime
+- add a backend and store countries in db instead
+  - NestJS
+  - Prisma
+  - script to fetch countries and write to db
+  - add option to us local file
+  - update useful commands
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## future ideas
 
-- Configure the top-level `parserOptions` property like this:
+- make public
+  - review code
+    - cull some features
+  - disclaimer about not being prod ready
+    - lack of test coverage
+    - lack of loading, error, states etc
+- pagination
+- search field with debounce
+- polling
+- filter by region
+- sort countries
+- dark mode
+- link to border countries on detail page
+- mark country as visited
+- display visited countries on a map
+- lazy load images
+- responsiveness
+- switch to nextjs (see decisions)
+- switch to trpc (see decisions)
+- pnpm
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## decisions worth recording
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- react-router-dom@5
+  - documentation of react-router-dom@6 was overwhelming
+- no deno because there aren't many companies using it
+- backend framework
+  - choice: nestjs
+  - alternative 1: nextjs instead. No, because I thought it would be too much new at once
+    - might be worth considering later
+  - alternative 2: fastify. No because its motivation is performacne
+- no trpc because I think it's too new
+  - might be worth considering if switching to nextjs
+
+## motivation
+
+- get familiar with the latest tooling so I can complete coding exercises faster
