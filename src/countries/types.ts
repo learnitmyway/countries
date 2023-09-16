@@ -1,5 +1,5 @@
 export type Country = {
-  capital: string[];
+  capital?: string[];
   flags: { png: string };
   name: { common: string; official: string };
   population: number;

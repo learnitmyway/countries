@@ -22,7 +22,7 @@ export const CountryCard = ({ country }: { country: Country }) => (
       </p>
       <p>
         <span className="font-semibold">Capital: </span>
-        {country.capital}
+        {country.capital?.join(", ")}
       </p>
     </CardContent>
   </Card>
