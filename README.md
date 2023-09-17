@@ -8,7 +8,6 @@
 
 ## to do
 
-- simple error and loading states in list view
 - complete detail view
   - consider staleTime
 - add a backend and store countries in db instead
@@ -27,7 +26,7 @@
     - cull some features
   - disclaimer about not being prod ready
     - lack of test coverage
-    - lack of loading, error, states etc
+    - shortcuts in UX (eg loading and error states)
 - pagination
 - search field with debounce
 - polling
