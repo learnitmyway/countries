@@ -1,7 +1,6 @@
 version: 2.1
 orbs:
-  node: circleci/node@1.1.6
-  tag: 20.6.1
+  node: circleci/node@5.1.0
 jobs:
   install-node:
     docker:
