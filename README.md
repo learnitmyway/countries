@@ -8,8 +8,6 @@
 
 ## to do
 
-- complete detail view
-  - consider staleTime
 - add a backend and store countries in db instead
   - rename repo to countries
   - same repo
@@ -26,14 +24,16 @@
     - cull some features
   - disclaimer about not being prod ready
     - lack of test coverage
-    - shortcuts in UX (eg loading and error states)
+    - lack of styling
 - pagination
 - search field with debounce
 - polling
 - filter by region
 - sort countries
 - dark mode
-- link to border countries on detail page
+- detail page
+  - link to border countries on detail page
+  - back
 - mark country as visited
 - display visited countries on a map
 - lazy load images

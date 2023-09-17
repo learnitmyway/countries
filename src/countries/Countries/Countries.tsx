@@ -1,13 +1,9 @@
-import { useQuery } from "@tanstack/react-query";
-import { getAllCountries } from "../countriesApi";
 import { CountryCard } from "./CountryCard";
 import { Link } from "react-router-dom";
+import { useCountries } from "./useCountries";
 
 export const Countries = () => {
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ["countries"],
-    queryFn: getAllCountries,
-  });
+  const { data, isLoading, isError } = useCountries();
 
   if (isLoading) {
     return <p>Loading...</p>;
