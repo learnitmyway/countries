@@ -19,10 +19,9 @@ jobs:
       - checkout
       - node/install-packages:
           pkg-manager: npm
-          cache-version: v2
       - run:
           command: |
-            circleci tests glob "src/**/*.{js,jsx,ts,tsx}" | circleci tests split --split-by=timings > /tmp/tests-to-run
+            circleci tests glob "src/**/*.test.{js,jsx,ts,tsx}" | circleci tests split --split-by=timings > /tmp/tests-to-run
             npm run test:ci $(cat /tmp/tests-to-run)
 
 workflows:
