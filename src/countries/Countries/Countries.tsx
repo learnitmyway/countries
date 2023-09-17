@@ -4,16 +4,24 @@ import { CountryCard } from "./CountryCard";
 import { Link } from "react-router-dom";
 
 export const Countries = () => {
-  const query = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ["countries"],
     queryFn: getAllCountries,
   });
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (isError) {
+    return <p>Error</p>;
+  }
 
   return (
     <>
       <main>
         <div className="flex flex-wrap justify-center items-center">
-          {query.data?.map((country) => (
+          {data.map((country) => (
             <Link
               key={country.name.common}
               to={`/countries/${country.name.common}`}

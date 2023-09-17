@@ -8,16 +8,17 @@
 
 ## to do
 
+- simple error and loading states in list view
 - complete detail view
   - consider staleTime
 - add a backend and store countries in db instead
+  - rename repo to countries
   - same repo
   - NestJS
   - Prisma
   - script to fetch countries and write to db
   - add option to us local file
   - update useful commands
-- rename to countries
 
 ## future ideas
 
@@ -54,6 +55,12 @@
   - alternative 2: fastify. No because its motivation is performacne
 - no trpc because I think it's too new
   - might be worth considering if switching to nextjs
+
+## lower priority
+
+- get in-source testing to work
+  - reverted commit: a07273d010865ffa9035fc9931b51110e1f4e033
+  - Error: `Uncaught Error: Vitest failed to access its internal state.`
 
 ## motivation
 
