@@ -8,8 +8,6 @@
 
 ## to do
 
-- setup circle ci pipeline
-  - specify node version https://circleci.com/developer/orbs/orb/circleci/node
 - complete detail view
   - consider staleTime
 - add a backend and store countries in db instead
