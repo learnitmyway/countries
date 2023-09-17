@@ -8,9 +8,6 @@
 
 ## to do
 
-- in-source testing https://vitest.dev/guide/in-source.html
-- vitest ui https://vitest.dev/guide/ui.html
-  - coverage https://vitest.dev/guide/coverage.html#vitest-ui
 - setup circle ci pipeline
   - replace husky?
     - remove `prepare` script

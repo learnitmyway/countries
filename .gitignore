@@ -21,4 +21,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# added by me
 coverage/
+html/
