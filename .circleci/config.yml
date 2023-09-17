@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@5.1.0
-  tag: 20.6
+  tag: node:20.6
 jobs:
   lint:
     executor:
