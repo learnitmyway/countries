@@ -8,8 +8,8 @@
 
 ## to do
 
-- set up vitest
-- https://vitest.dev/guide/ui.html
+- in-source testing https://vitest.dev/guide/in-source.html
+- vitest ui https://vitest.dev/guide/ui.html
   - coverage https://vitest.dev/guide/coverage.html#vitest-ui
 - setup circle ci pipeline
   - replace husky?
