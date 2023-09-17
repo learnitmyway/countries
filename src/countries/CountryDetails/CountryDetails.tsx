@@ -25,14 +25,14 @@ export function CountryDetails() {
   }
 
   const nativeNames = Object.values(country.name.nativeName).map(
-    (entry) => entry.common
+    (entry) => entry.common,
   );
 
   const languages = Object.values(country.languages);
 
   return (
     <main>
-      <h1 className="text-xl mb-2">{name}</h1>
+      <h1 className="mb-2 text-xl">{name}</h1>
       <Attribute
         title="Native names"
         content={joinList({ list: nativeNames })}

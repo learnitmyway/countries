@@ -16,13 +16,13 @@ export const Countries = () => {
   return (
     <>
       <main>
-        <div className="flex flex-wrap justify-center items-center">
+        <div className="flex flex-wrap items-center justify-center">
           {data.map((country) => (
             <Link
               key={country.name.common}
               to={`/countries/${country.name.common}`}
             >
-              <div className="p-9 flex-none">
+              <div className="flex-none p-9">
                 <CountryCard country={country} />
               </div>
             </Link>
