@@ -5,21 +5,49 @@
 - `npm install`
 - `npm run dev`
 - `npm test`
+- see also scripts in `package.json`
 
 ## to do
 
-- add a backend and store countries in db instead
-  - rename repo to countries
-  - same repo
+- prettier-plugin-tailwindcss
+- add a backend and store countries
+  - where should the backend live?
+    - yes: create frontend and backend folders with shared tsconfig, eslintrc, package.json
+      - con: change file paths
+    - maybe: create frontend and backend folders and duplicate tsconfig, eslintrc, but share package.json
+      - con: change file paths
+      - con: duplicate configs
+      - pro: might be less effort than sharing
+    - Maybe: create frontend and backend folders with shared tsconfig, eslintrc, but unique package.json (npm workspaces?)
+      - con: change file paths
+      - pro: potentially the best solution
+      - con: potentiallymost effort
+    - No: only create backend folder at root and duplicate tsconfig, eslintrc, but share all of package.json
+      - pro: no change of file paths
+      - con: duplicate configs
+      - con: confusing
+      - how would I differentiate between configs?
+        - maybe I could exclude `backend`?
+    - No: create server folder within src like t3-app
+      - pro: no change of file paths
+      - con: duplicate configs
+      - con: doesn't make sense
+        - I think the difference is that NextJS is serving the BE and FE
+      - how would I differentiate between configs?
+        - maybe I could exclude `src/server`?
+    - Maybe: separate repo
+      - pro: most familiar
+      - pro: no commit-message prefix needed
+      - con: nothing is shared
+      - con: can only rollback separately
   - NestJS
   - Prisma
   - script to fetch countries and write to db
-  - add option to us local file
-  - update useful commands
+    - what if we just parse the json file instead?
 
 ## future ideas
 
-- make public
+- make repo public
   - review code
     - cull some features
   - disclaimer about not being prod ready
