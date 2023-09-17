@@ -19,6 +19,7 @@
   - script to fetch countries and write to db
   - add option to us local file
   - update useful commands
+- rename to countries
 
 ## future ideas
 
