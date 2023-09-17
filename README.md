@@ -9,7 +9,6 @@
 
 ## to do
 
-- prettier-plugin-tailwindcss
 - add a backend and store countries
   - where should the backend live?
     - yes: create frontend and backend folders with shared tsconfig, eslintrc, package.json
