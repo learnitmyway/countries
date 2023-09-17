@@ -16,6 +16,7 @@ jobs:
     executor:
       name: node/default
     steps:
+      - cache-version: v2
       - checkout
       - node/install-packages:
           pkg-manager: npm
