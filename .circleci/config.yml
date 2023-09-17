@@ -2,36 +2,27 @@ version: 2.1
 orbs:
   node: circleci/node@5.1.0
 jobs:
-  install-node:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - node/install:
-          node-version: "20.6.1"
-      - run: node --version
   lint:
     executor:
       name: node/default
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
-            - run: npm run lint
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          command: npm run lint
   test:
     parallelism: 2
     executor:
       name: node/default
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
-            - run:
-                command: |
-                  circleci tests glob "src/**/*.{js,jsx,ts,tsx}" | circleci tests split --split-by=timings > /tmp/tests-to-run
-                  npm run test:ci $(cat /tmp/tests-to-run)
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          command: |
+            circleci tests glob "src/**/*.{js,jsx,ts,tsx}" | circleci tests split --split-by=timings > /tmp/tests-to-run
+            npm run test:ci $(cat /tmp/tests-to-run)
 
 workflows:
   default:
