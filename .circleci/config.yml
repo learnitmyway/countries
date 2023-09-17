@@ -1,7 +1,16 @@
 version: 2.1
 orbs:
   node: circleci/node@1.1.6
+  tag: 20.6.1
 jobs:
+  install-node:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - node/install:
+          node-version: "20.6.1"
+      - run: node --version
   lint:
     executor:
       name: node/default
