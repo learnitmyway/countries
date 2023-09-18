@@ -10,45 +10,12 @@
 ## to do
 
 - add a backend and store countries
-  - where should the backend live?
-    - no: create frontend and backend folders with shared configs, package.json
-      - con: change file paths
-      - how to handle npm scripts?
-    - no: create frontend and backend folders with own configs but share package.json
-      - con: change file paths
-      - con: no shared configs
-      - pro: might be less effort than sharing
-      - how to handle npm scripts?
-    - yes: create frontend and backend folders with own configs and package.json
-      - con: change file paths
-      - con: no shared configs
-    - maybe: create frontend and backend folders with shared configs, but unique package.json (npm workspaces?)
-      - con: change file paths
-      - pro: potentially the best solution
-      - con: potentially most effort
-    - no: only create backend folder at root with shared configs, but share package.json
-      - pro: no change of file paths
-      - con: duplicate configs
-      - con: confusing
-      - how would I differentiate between configs?
-        - maybe I could exclude `backend`?
-    - no: create server folder within src like t3-app
-      - pro: no change of file paths
-      - con: duplicate configs
-      - con: doesn't make sense
-        - I think the difference is that NextJS is serving the BE and FE
-      - how would I differentiate between configs?
-        - maybe I could exclude `src/server`?
-    - maybe: separate repo
-      - pro: most familiar
-      - pro: no commit-message prefix needed
-      - con: nothing is shared
-      - con: can only rollback separately
   - NestJS
   - script to fetch countries and write to db
     - what if we just parse the json file instead?
       - check which field is unique. Start with `two letters`. If nothing is unique generate a \_\_\_ to uid map and test that each country has an id
 - FE: normalise country data
+- share tsconfig, eslintrc and .vscode b/w fe and be
 
 ## future ideas
 
@@ -88,6 +55,7 @@
   - alternative 2: fastify. No because its motivation is performacne
 - no trpc because I think it's too new
   - might be worth considering if switching to nextjs
+- [where-should-the-backend-live](adr/where-should-the-backend-live.md)
 
 ## lower priority
 
