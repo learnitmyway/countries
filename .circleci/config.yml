@@ -3,23 +3,23 @@ orbs:
   node: circleci/node@5.1.0
 jobs:
   lint-fe:
+    working_directory: countries-fe
     executor:
       name: node/default
     steps:
       - checkout
       - node/install-packages:
-          app-dir: countries-fe
           pkg-manager: npm
       - run:
           command: npm run lint
   test-fe:
+    working_directory: countries-fe
     parallelism: 2
     executor:
       name: node/default
     steps:
       - checkout
       - node/install-packages:
-          app-dir: countries-fe
           pkg-manager: npm
       - run:
           command: |
