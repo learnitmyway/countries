@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@5.1.0
 jobs:
-  lint:
+  lint-fe:
     executor:
       name: node/default
     steps:
@@ -12,7 +12,7 @@ jobs:
           pkg-manager: npm
       - run:
           command: npm run lint
-  frontend-test:
+  test-fe:
     parallelism: 2
     executor:
       name: node/default
@@ -29,5 +29,5 @@ jobs:
 workflows:
   default:
     jobs:
-      - lint
-      - frontend-test
+      - lint-fe
+      - test-fe
