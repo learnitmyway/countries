@@ -2,17 +2,16 @@
 
 ## to do
 
-- add a backend and store countries
-  - NestJS
-  - script to fetch countries and write to db
-    - what if we just parse the json file instead?
-      - check which field is unique. Start with `two letters`. If nothing is unique generate a \_\_\_ to uid map and test that each country has an id
+- BE: script to fetch countries and write to db
+  - what if we just parse the json file instead?
+    - check which field is unique. Start with `two letters`. If nothing is unique generate a \_\_\_ to uid map and test that each country has an id
 - FE: normalise country data
-- BE: add linting and testing to circle ci
-- share tsconfig, eslintrc, .nvmrc b/w fe and be
 
 ## future ideas
 
+- share tsconfig, eslintrc between FE and BE
+- share types between FE and BE
+- Read nestjs docs https://docs.nestjs.com/first-steps
 - Prisma
 - make repo public
   - review code
