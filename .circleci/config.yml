@@ -11,6 +11,7 @@ jobs:
           app-dir: countries-fe
           pkg-manager: npm
       - run:
+          app-dir: countries-fe
           command: npm run lint
   test-fe:
     parallelism: 2
@@ -22,6 +23,7 @@ jobs:
           app-dir: countries-fe
           pkg-manager: npm
       - run:
+          app-dir: countries-fe
           command: |
             circleci tests glob "src/**/*.test.{js,jsx,ts,tsx}" | circleci tests split --split-by=timings > /tmp/tests-to-run
             npm run test:ci $(cat /tmp/tests-to-run)
