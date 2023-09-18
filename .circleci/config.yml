@@ -3,7 +3,7 @@ orbs:
   node: circleci/node@5.1.0
 jobs:
   lint-fe:
-    working_directory: countries-fe
+    working_directory: ~/countries-fe
     executor:
       name: node/default
     steps:
@@ -13,7 +13,7 @@ jobs:
       - run:
           command: npm run lint
   test-fe:
-    working_directory: countries-fe
+    working_directory: ~/countries-fe
     parallelism: 2
     executor:
       name: node/default
