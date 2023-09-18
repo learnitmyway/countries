@@ -1,10 +1,14 @@
 # Countries
 
+see also
+
+- [countries-fe/README.md](countries-fe/README.md)
+- [countries-be/README.md](countries-be/README.md)
+
 ## to do
 
-- BE: script to fetch countries and write to db
-  - what if we just parse the json file instead?
-    - check which field is unique. Start with `two letters`. If nothing is unique generate a \_\_\_ to uid map and test that each country has an id
+- BE: Prisma
+- BE: store data in DB for sorting/filtering/pagination?
 - FE: normalise country data
 
 ## future ideas
@@ -12,11 +16,12 @@
 - share tsconfig, eslintrc between FE and BE
 - share types between FE and BE
 - Read nestjs docs https://docs.nestjs.com/first-steps
-- Prisma
 - make repo public
   - review code
     - cull some features
   - disclaimer about not being prod ready
+    - only works on localhost
+    - lack of security (eg. cors is enabled)
     - lack of test coverage
     - lack of styling
 - pagination
@@ -35,6 +40,7 @@
 - switch to nextjs (see decisions)
 - switch to trpc (see decisions)
 - pnpm
+- auth
 
 ## ADRs
 
