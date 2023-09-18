@@ -1,12 +1,5 @@
 # Countries
 
-## useful commands
-
-- `npm install`
-- `npm run dev`
-- `npm test`
-- see also scripts in `package.json`
-
 ## to do
 
 - add a backend and store countries
@@ -15,7 +8,7 @@
     - what if we just parse the json file instead?
       - check which field is unique. Start with `two letters`. If nothing is unique generate a \_\_\_ to uid map and test that each country has an id
 - FE: normalise country data
-- share tsconfig, eslintrc and .vscode b/w fe and be
+- share tsconfig, eslintrc, .nvmrc b/w fe and be
 
 ## future ideas
 
@@ -43,7 +36,7 @@
 - switch to trpc (see decisions)
 - pnpm
 
-## decisions worth recording
+## ADRs
 
 - react-router-dom@5
   - documentation of react-router-dom@6 was overwhelming
