@@ -40,12 +40,14 @@
       - con: nothing is shared
       - con: can only rollback separately
   - NestJS
-  - Prisma
   - script to fetch countries and write to db
     - what if we just parse the json file instead?
+      - check which field is unique. Start with `two letters`. If nothing is unique generate a \_\_\_ to uid map and test that each country has an id
+- FE: normalise country data
 
 ## future ideas
 
+- Prisma
 - make repo public
   - review code
     - cull some features
