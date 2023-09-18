@@ -13,6 +13,17 @@ jobs:
       - run:
           command: npm run lint
           working_directory: countries-fe
+  lint-be:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          app-dir: countries-be
+          pkg-manager: npm
+      - run:
+          command: npm run lint
+          working_directory: countries-be
   test-fe:
     parallelism: 2
     executor:
@@ -27,9 +38,25 @@ jobs:
             circleci tests glob "src/**/*.test.{js,jsx,ts,tsx}" | circleci tests split --split-by=timings > /tmp/tests-to-run
             npm run test:ci $(cat /tmp/tests-to-run)
           working_directory: countries-fe
+  test-be:
+    parallelism: 2
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          app-dir: countries-be
+          pkg-manager: npm
+      - run:
+          command: |
+            circleci tests glob "src/**/*.test.{js,jsx,ts,tsx}" | circleci tests split --split-by=timings > /tmp/tests-to-run
+            npm run test:ci $(cat /tmp/tests-to-run)
+          working_directory: countries-be
 
 workflows:
   default:
     jobs:
       - lint-fe
+      - lint-be
       - test-fe
+      - test-be
