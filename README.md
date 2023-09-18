@@ -7,7 +7,6 @@
   - script to fetch countries and write to db
     - what if we just parse the json file instead?
       - check which field is unique. Start with `two letters`. If nothing is unique generate a \_\_\_ to uid map and test that each country has an id
-- BE: update README
 - FE: move .gitignore
 - FE: normalise country data
 - share tsconfig, eslintrc, .nvmrc b/w fe and be
