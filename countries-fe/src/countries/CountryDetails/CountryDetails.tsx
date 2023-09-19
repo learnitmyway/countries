@@ -24,11 +24,11 @@ export function CountryDetails() {
     return <p>Not found</p>;
   }
 
-  const nativeNames = Object.values(country.name.nativeName).map(
-    (entry) => entry.common,
-  );
+  const nativeNames =
+    country.name.nativeName &&
+    Object.values(country.name.nativeName).map((entry) => entry.common);
 
-  const languages = Object.values(country.languages);
+  const languages = country.languages && Object.values(country.languages);
 
   return (
     <main>
@@ -54,7 +54,7 @@ function Attribute({
   content,
 }: {
   title: string;
-  content: string | number;
+  content?: string | number;
 }) {
   return (
     <p>

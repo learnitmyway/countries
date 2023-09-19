@@ -1,13 +1,13 @@
 export type Country = {
   capital?: string[];
   currencies?: {
-    [code: string]: { name: string; symbol?: string } | undefined;
+    [code: string]: { name: string; symbol?: string };
   };
   flags: { png: string };
-  languages?: { [key: string]: string | undefined };
+  languages?: { [code: string]: string };
   name: {
     common: string;
-    nativeName?: { [code: string]: { common: string } | undefined };
+    nativeName?: { [code: string]: { common: string } };
   };
   population: number;
   region: string;
