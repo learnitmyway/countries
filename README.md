@@ -7,12 +7,14 @@ see also
 
 ## to do
 
+- FE: add typecheck to pipeline
+- BE: add typecheck to pipeline
 - BE: Prisma
-- BE: store data in DB for sorting/filtering/pagination?
 - FE: normalise country data
 
 ## future ideas
 
+- BE: docker for db
 - share tsconfig, eslintrc between FE and BE
 - share types between FE and BE
 - Read nestjs docs https://docs.nestjs.com/first-steps
@@ -24,7 +26,6 @@ see also
     - lack of security (eg. cors is enabled)
     - lack of test coverage
     - lack of styling
-- pagination
 - search field with debounce
 - polling
 - filter by region
@@ -55,6 +56,8 @@ see also
 - no trpc because I think it's too new
   - might be worth considering if switching to nextjs
 - [where-should-the-backend-live](adr/where-should-the-backend-live.md)
+- no need to store countries in a DB because because it's only a read operation
+  - sorting/filtering/searching can be done in the FE
 
 ## lower priority
 
