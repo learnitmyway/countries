@@ -42,6 +42,7 @@ see also
 - switch to trpc (see decisions)
 - pnpm
 - auth
+- consider pagination to reduce 829kB payload
 
 ## ADRs
 
