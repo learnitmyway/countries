@@ -52,6 +52,28 @@ jobs:
             circleci tests glob "src/**/*.test.{js,jsx,ts,tsx}" | circleci tests split --split-by=timings > /tmp/tests-to-run
             npm run test:ci $(cat /tmp/tests-to-run)
           working_directory: countries-be
+  typecheck-fe:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          app-dir: countries-fe
+          pkg-manager: npm
+      - run:
+          command: npm run typecheck
+          working_directory: countries-fe
+  typecheck-be:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          app-dir: countries-be
+          pkg-manager: npm
+      - run:
+          command: npm run typecheck
+          working_directory: countries-be
 
 workflows:
   default:
@@ -60,3 +82,5 @@ workflows:
       - lint-be
       - test-fe
       - test-be
+      - typecheck-fe
+      - typecheck-be

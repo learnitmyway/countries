@@ -7,8 +7,6 @@ see also
 
 ## to do
 
-- FE: add typecheck to pipeline
-- BE: add typecheck to pipeline
 - BE: Prisma
 - FE: normalise country data
 

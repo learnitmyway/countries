@@ -21,6 +21,6 @@ type Country = {
 export class CountriesController {
   @Get()
   getAll(): Country[] {
-    return data as Country[];
+    return data;
   }
 }
