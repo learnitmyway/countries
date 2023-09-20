@@ -24,9 +24,9 @@ export function CountryDetails() {
     return <p>Not found</p>;
   }
 
-  const nativeNames =
-    country.name.nativeName &&
-    Object.values(country.name.nativeName).map((entry) => entry.common);
+  const nativeNames = Object.values(country.name.nativeName).map(
+    (entry) => entry.common,
+  );
 
   const languages = country.languages && Object.values(country.languages);
 
