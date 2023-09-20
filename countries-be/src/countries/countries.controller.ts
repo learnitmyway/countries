@@ -21,7 +21,6 @@ type Country = {
 export class CountriesController {
   @Get()
   getAll(): Country[] {
-    // FIXME: Is there a way to satisfy the compiler without using `as unknown as Country[]`?
-    return data as unknown as Country[];
+    return data as Country[];
   }
 }
