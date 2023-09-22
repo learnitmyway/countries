@@ -8,22 +8,22 @@ jobs:
     steps:
       - checkout
       - node/install-packages:
-          app-dir: countries-fe
+          app-dir: frontend
           pkg-manager: npm
       - run:
           command: npm run lint
-          working_directory: countries-fe
+          working_directory: frontend
   lint-be:
     executor:
       name: node/default
     steps:
       - checkout
       - node/install-packages:
-          app-dir: countries-be
+          app-dir: backend
           pkg-manager: npm
       - run:
           command: npm run lint
-          working_directory: countries-be
+          working_directory: backend
   test-fe:
     parallelism: 2
     executor:
@@ -31,13 +31,13 @@ jobs:
     steps:
       - checkout
       - node/install-packages:
-          app-dir: countries-fe
+          app-dir: frontend
           pkg-manager: npm
       - run:
           command: |
             circleci tests glob "src/**/*.test.{js,jsx,ts,tsx}" | circleci tests split --split-by=timings > /tmp/tests-to-run
             npm run test:ci $(cat /tmp/tests-to-run)
-          working_directory: countries-fe
+          working_directory: frontend
   test-be:
     parallelism: 2
     executor:
@@ -45,35 +45,35 @@ jobs:
     steps:
       - checkout
       - node/install-packages:
-          app-dir: countries-be
+          app-dir: backend
           pkg-manager: npm
       - run:
           command: |
             circleci tests glob "src/**/*.test.{js,jsx,ts,tsx}" | circleci tests split --split-by=timings > /tmp/tests-to-run
             npm run test:ci $(cat /tmp/tests-to-run)
-          working_directory: countries-be
+          working_directory: backend
   typecheck-fe:
     executor:
       name: node/default
     steps:
       - checkout
       - node/install-packages:
-          app-dir: countries-fe
+          app-dir: frontend
           pkg-manager: npm
       - run:
           command: npm run typecheck
-          working_directory: countries-fe
+          working_directory: frontend
   typecheck-be:
     executor:
       name: node/default
     steps:
       - checkout
       - node/install-packages:
-          app-dir: countries-be
+          app-dir: backend
           pkg-manager: npm
       - run:
           command: npm run typecheck
-          working_directory: countries-be
+          working_directory: backend
 
 workflows:
   default:

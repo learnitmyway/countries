@@ -15,6 +15,7 @@ This app isn't production ready:
 
 ### useful commands
 
+- `cd frontend`
 - `npm install`
 - `npm run dev`
 - `npm test`
@@ -25,6 +26,7 @@ This app isn't production ready:
 
 ### Useful commands
 
+- `cd backend`
 - `npm install`
 - `npm run start:dev`
 - `npm test`
