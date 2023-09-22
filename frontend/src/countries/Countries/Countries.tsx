@@ -13,6 +13,10 @@ export const Countries = () => {
     return <p>Error</p>;
   }
 
+  if (data.length === 0) {
+    return <p>No countries :(</p>;
+  }
+
   return (
     <>
       <main>
