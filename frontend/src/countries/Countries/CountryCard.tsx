@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/shadcn/ui/card";
 import { Country } from "../types";
 import { joinList } from "./util";
 
