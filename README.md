@@ -11,10 +11,24 @@ This app isn't production ready
 - test coverage is low
 - some components aren't styled
 
-## see also
+## frontend
 
-- [countries-fe/README.md](countries-fe/README.md)
-- [countries-be/README.md](countries-be/README.md)
+### useful commands
+
+- `npm install`
+- `npm run dev`
+- `npm test`
+- see also scripts in `package.json`
+- Generate new component (eg button) with `npx shadcn-ui@latest add button`
+
+## backend
+
+### Useful commands
+
+- `npm install`
+- `npm run start:dev`
+- `npm test`
+- see also scripts in `package.json`
 
 ## ADRs
 
