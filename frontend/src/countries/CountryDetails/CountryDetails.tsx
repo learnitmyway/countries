@@ -1,27 +1,25 @@
 import { useParams } from "react-router-dom";
-import { useCountries } from "../Countries/useCountries";
 import { joinList } from "../Countries/util";
+import { useCountry } from "./useCountry";
 
 interface RouteParams {
   cca2: string;
 }
 
 export function CountryDetails() {
-  const { data, isLoading, isError } = useCountries();
   const { cca2 } = useParams<RouteParams>();
+  const { country, isFetching, isError } = useCountry({ cca2 });
 
-  if (isLoading) {
+  if (!country && isFetching) {
     return <p>Loading...</p>;
+  }
+
+  if (!country) {
+    return <p>Not found</p>;
   }
 
   if (isError) {
     return <p>Error</p>;
-  }
-
-  const country = data.find((country) => country.cca2 === cca2);
-
-  if (!country) {
-    return <p>Not found</p>;
   }
 
   const nativeNames =

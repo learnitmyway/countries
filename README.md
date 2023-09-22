@@ -9,7 +9,7 @@ This app isn't production ready:
 - it only works on localhost
 - security hasn't been considered (eg. cors is enabled for everyone)
 - test coverage is low
-- some components aren't styled
+- UX is almost completely absent in some places
 
 ## frontend
 
