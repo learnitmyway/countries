@@ -14,7 +14,7 @@ const queryClient = new QueryClient();
 function Routes() {
   return (
     <Switch>
-      <Route path="/countries/:name">
+      <Route path="/countries/:cca2">
         <CountryDetails />
       </Route>
       <Route path="/countries">

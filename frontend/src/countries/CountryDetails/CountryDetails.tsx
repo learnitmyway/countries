@@ -3,12 +3,12 @@ import { useCountries } from "../Countries/useCountries";
 import { joinList } from "../Countries/util";
 
 interface RouteParams {
-  name: string;
+  cca2: string;
 }
 
 export function CountryDetails() {
   const { data, isLoading, isError } = useCountries();
-  const { name } = useParams<RouteParams>();
+  const { cca2 } = useParams<RouteParams>();
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -18,7 +18,7 @@ export function CountryDetails() {
     return <p>Error</p>;
   }
 
-  const country = data.find((country) => country.name.common === name);
+  const country = data.find((country) => country.cca2 === cca2);
 
   if (!country) {
     return <p>Not found</p>;
@@ -32,7 +32,7 @@ export function CountryDetails() {
 
   return (
     <main>
-      <h1 className="mb-2 text-xl">{name}</h1>
+      <h1 className="mb-2 text-xl">{country.name.common}</h1>
       <Attribute
         title="Native names"
         content={joinList({ list: nativeNames })}

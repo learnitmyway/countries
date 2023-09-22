@@ -18,10 +18,7 @@ export const Countries = () => {
       <main>
         <div className="flex flex-wrap items-center justify-center">
           {data.map((country) => (
-            <Link
-              key={country.name.common}
-              to={`/countries/${country.name.common}`}
-            >
+            <Link key={country.cca2} to={`/countries/${country.cca2}`}>
               <div className="flex-none p-9">
                 <CountryCard country={country} />
               </div>

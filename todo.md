@@ -2,6 +2,7 @@
 
 ## next
 
+- extract Routes
 - detail endpoint
 - mark country as visited
 - FE: normalise country data

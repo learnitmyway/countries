@@ -1,5 +1,6 @@
 export type Country = {
   capital?: string[];
+  cca2: string;
   currencies?: {
     [code: string]: { name: string; symbol?: string };
   };
