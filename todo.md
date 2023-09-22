@@ -7,7 +7,6 @@
 
 ## future
 
-- BE: docker for db
 - share tsconfig, eslintrc between FE and BE
 - share types between FE and BE
 - Read nestjs docs https://docs.nestjs.com/first-steps

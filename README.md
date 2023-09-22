@@ -32,6 +32,11 @@ This app isn't production ready:
 - `npm test`
 - see also scripts in `package.json`
 
+## database
+
+- start with `docker-compose up -d`
+- psql `docker exec --tty --interactive countries-postgres-dev psql --host=localhost --username=postgres --dbname=postgres`
+
 ## ADRs
 
 - react-router-dom@5
