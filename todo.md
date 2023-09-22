@@ -2,6 +2,7 @@
 
 ## next
 
+- mark country as visited
 - combine gitignores
 - FE: normalise country data
 
@@ -18,7 +19,6 @@
 - detail page
   - link to border countries on detail page
   - back
-- mark country as visited
 - display visited countries on a map
 - lazy load images
 - responsiveness
