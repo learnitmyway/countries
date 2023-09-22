@@ -2,11 +2,8 @@
 
 ## next
 
-- extract Routes
-- get details from BE
-  - FE: handle 404
+- FE: handle 404
 - mark country as visited
-- FE: normalise country data
 
 ## future
 

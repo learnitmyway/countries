@@ -12,8 +12,5 @@ export const getCountry = async ({
 }: {
   cca2: string;
 }): Promise<Country | undefined> => {
-  const countries: Country[] = await fetchWrapper({ url: baseUrl });
-  return countries.find((country) => country.cca2 === cca2);
-  // TODO:
-  // return await fetchWrapper({ url: baseUrl + `/${cca2}` });
+  return await fetchWrapper({ url: baseUrl + `/${cca2}` });
 };
