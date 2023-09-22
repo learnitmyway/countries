@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useCountries } from "./useCountries";
 
 export const Countries = () => {
-  const { data, isLoading, isError } = useCountries();
+  const { data, isLoading, isError, isFetched } = useCountries();
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -13,7 +13,7 @@ export const Countries = () => {
     return <p>Error</p>;
   }
 
-  if (data.length === 0) {
+  if (data.length === 0 && isFetched) {
     return <p>No countries :(</p>;
   }
 
