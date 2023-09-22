@@ -8,6 +8,9 @@
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "db:migrate": "prisma migrate dev",
+    "db:reset": "npm run db:migrate && npm run db:seed",
+    "db:seed": "npx ts-node prisma/seed.ts",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
@@ -24,6 +27,8 @@
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
+    "@prisma/client": "^5.3.1",
+    "prisma": "^5.3.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1"
   },

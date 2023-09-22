@@ -3,6 +3,7 @@
 ## next
 
 - BE: Prisma
+- combine gitignores
 - FE: normalise country data
 
 ## future

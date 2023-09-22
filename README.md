@@ -27,7 +27,9 @@ This app isn't production ready:
 ### Useful commands
 
 - `cd backend`
+- `cp .env.example .env`
 - `npm install`
+- `npm run db:reset`
 - `npm run start:dev`
 - `npm test`
 - see also scripts in `package.json`
@@ -35,7 +37,7 @@ This app isn't production ready:
 ## database
 
 - start with `docker-compose up -d`
-- psql `docker exec --tty --interactive countries-postgres-dev psql --host=localhost --username=postgres --dbname=postgres`
+- psql `docker exec --tty --interactive countries-postgres-dev psql --host=localhost --username=postgres --dbname=countries-dev`
 
 ## ADRs
 
