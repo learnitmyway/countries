@@ -2,10 +2,9 @@
 
 ## next
 
-- FE: handle 404
-- FE: query key factory https://tkdodo.eu/blog/effective-react-query-keys
 - extract Routes
 - get details from BE
+  - FE: handle 404
 - mark country as visited
 - FE: normalise country data
 
