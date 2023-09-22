@@ -2,8 +2,8 @@
 
 ## next
 
+- detail endpoint
 - mark country as visited
-- combine gitignores
 - FE: normalise country data
 
 ## future
