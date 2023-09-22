@@ -1,10 +1,10 @@
 # Countries
 
-An app that displays country data to using technology that I like or want to try.
+An app that displays country data using technology that I like or want to try.
 
-Original data is from https://restcountries.com/v3.1/all, September 2023
+Original data is from https://restcountries.com/v3.1/all, September 2023.
 
-This app isn't production ready
+This app isn't production ready:
 
 - it only works on localhost
 - security hasn't been considered (eg. cors is enabled for everyone)
