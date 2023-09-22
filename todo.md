@@ -2,7 +2,6 @@
 
 ## next
 
-- FE: no countries flash
 - mark country as visited
 
 ## future
