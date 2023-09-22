@@ -2,7 +2,7 @@
 
 ## next
 
-- FE: handle 404
+- FE: no countries flash
 - mark country as visited
 
 ## future

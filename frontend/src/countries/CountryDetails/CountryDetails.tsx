@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { joinList } from "../Countries/util";
 import { useCountry } from "./useCountry";
+import { NotFoundError } from "../../utils/NotFoundError";
 
 interface RouteParams {
   cca2: string;
@@ -8,18 +9,21 @@ interface RouteParams {
 
 export function CountryDetails() {
   const { cca2 } = useParams<RouteParams>();
-  const { country, isFetching, isError } = useCountry({ cca2 });
+  const { country, isFetching, error } = useCountry({ cca2 });
 
   if (!country && isFetching) {
     return <p>Loading...</p>;
   }
 
-  if (!country) {
-    return <p>Not found</p>;
+  if (!country && error) {
+    if (error instanceof NotFoundError) {
+      return <p>Not Found</p>;
+    }
+    return <p>Error</p>;
   }
 
-  if (isError) {
-    return <p>Error</p>;
+  if (!country) {
+    return null;
   }
 
   const nativeNames =
