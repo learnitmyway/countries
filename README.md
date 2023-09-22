@@ -13,31 +13,36 @@ This app isn't production ready:
 
 ## frontend
 
+- `cd frontend`
+
+### setup
+
+- `npm install`
+- Generate new component (eg button) with `npx shadcn-ui@latest add button`
+
 ### useful commands
 
-- `cd frontend`
-- `npm install`
 - `npm run dev`
 - `npm test`
 - see also scripts in `package.json`
-- Generate new component (eg button) with `npx shadcn-ui@latest add button`
 
 ## backend
 
-### Useful commands
-
 - `cd backend`
+
+### setup
+
 - `cp .env.example .env`
 - `npm install`
+- start db with `docker-compose up -d`
 - `npm run db:reset`
+
+### useful commands
+
 - `npm run start:dev`
 - `npm test`
 - see also scripts in `package.json`
-
-## database
-
-- start with `docker-compose up -d`
-- psql `docker exec --tty --interactive countries-postgres-dev psql --host=localhost --username=postgres --dbname=countries-dev`
+- interact with db `docker exec --tty --interactive countries-postgres-dev psql --host=localhost --username=postgres --dbname=countries-dev`
 
 ## ADRs
 
