@@ -9,19 +9,22 @@ interface RouteParams {
 
 export function CountryDetails() {
   const { cca2 } = useParams<RouteParams>();
-  const { country, isFetching, error } = useCountry({ cca2 });
+  const { data: country, isLoading, error } = useCountry({ cca2 });
 
-  if (!country && isFetching) {
+  // FIXME: tell TS that this is is not always false
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  if (isLoading) {
     return <p>Loading...</p>;
   }
 
-  if (!country && error) {
+  if (error) {
     if (error instanceof NotFoundError) {
       return <p>Not Found</p>;
     }
     return <p>Error</p>;
   }
 
+  // TODO: is there a way to avoid this check?
   if (!country) {
     return null;
   }

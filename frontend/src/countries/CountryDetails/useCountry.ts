@@ -1,23 +1,22 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { getCountry } from "../countriesApi";
-import { useCountries } from "../Countries/useCountries";
 import { countryKeys } from "../countryQueryKeys";
+import { Country } from "../types";
 
 export function useCountry({ cca2 }: { cca2: string }) {
-  const query = useQuery({
+  const queryClient = useQueryClient();
+
+  return useQuery({
     queryKey: countryKeys.detail({ cca2 }),
     queryFn: () => getCountry({ cca2 }),
+    initialData: () => {
+      const state = queryClient.getQueryState<Country[]>(countryKeys.list());
+      if (state?.data && state.data.length > 0) {
+        return state.data.find((country) => country.cca2 === cca2);
+      }
+    },
+    initialDataUpdatedAt: () =>
+      queryClient.getQueryState(countryKeys.list())?.dataUpdatedAt,
     staleTime: Infinity,
   });
-
-  // if there is already data from the list, use it,
-  // but don't refetch because we are fetching the detail instead
-  const { data } = query;
-  const { data: allCountriesData } = useCountries({ enabled: false });
-  const country = data ? data : allCountriesData?.find((c) => c.cca2 === cca2);
-
-  return {
-    ...query,
-    country,
-  };
 }
