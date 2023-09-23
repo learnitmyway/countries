@@ -46,16 +46,25 @@ This app isn't production ready:
 
 ## ADRs
 
-- react-router-dom@5
-  - documentation of react-router-dom@6 was overwhelming
-- no deno because I don't think there aren't many companies using it
-- backend framework
-  - choice: nestjs
-  - alternative 1: nextjs instead. No, because I thought it would be too much new at once
-    - might be worth considering later
-  - alternative 2: fastify. No because its motivation is performance that that isn't a priority
-- no trpc because I think it's too new
-  - might be worth considering if switching to nextjs
-- [where-should-the-backend-live](adr/where-should-the-backend-live.md)
-- no need to store countries in a DB because because it's only a read operation
-  - sorting/filtering/searching can be done in the FE
+1. react-router-dom@5
+
+- documentation of react-router-dom@6 was overwhelming
+
+2. no deno because I don't think there aren't many companies using it
+3. backend framework
+
+- choice: nestjs
+- alternative 1: nextjs instead. No, because I thought it would be too much new at once
+  - might be worth considering later
+- alternative 2: fastify. No because its motivation is performance that that isn't a priority
+
+4. no trpc because I think it's too new
+
+- might be worth considering if switching to nextjs
+
+5. [where-should-the-backend-live](adr/where-should-the-backend-live.md)
+6. deprecated: no need to store countries in a DB because because it's only a read operation
+
+- sorting/filtering/searching can be done in the FE
+
+7. store countries in DB otherwise there are multiple data sources
