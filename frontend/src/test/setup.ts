@@ -1,18 +1,9 @@
-import { afterAll, afterEach, beforeAll } from "vitest";
-import { server } from "./mocks/server";
+import { beforeEach, afterEach, vi } from "vitest";
 import { cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/vitest";
 
-beforeAll(() => {
-  server.listen({ onUnhandledRequest: "error" });
-});
-
-afterAll(() => {
-  server.close();
-});
-
-afterEach(() => {
-  server.resetHandlers();
+beforeEach(() => {
+  vi.resetAllMocks();
 });
 
 afterEach(() => {
