@@ -2,6 +2,11 @@
 
 ## next
 
+- FE: disallow it.only
+  - are there vitest eslint rules?
+- FE: extract routeUtils
+  - CountryDetails.test
+  - Routes
 - FE: add some tests to CountryDetail
   - no initialData
   - with initialData
@@ -33,9 +38,10 @@
 
 ## deprioritised
 
-- display visited countries on a map
-- lazy load images
-- responsiveness
+- FE: setup rtl as per docs https://testing-library.com/docs/react-testing-library/setup/
+- FE: display visited countries on a map
+- FE: lazy load images
+- FE: responsiveness
 - BE: remove typechecking from test and start
 - FE: get in-source testing to work
   - reverted commit: a07273d010865ffa9035fc9931b51110e1f4e033
