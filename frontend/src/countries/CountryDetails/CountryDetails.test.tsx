@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import { CountryDetails } from "./CountryDetails";
 import { createQueryClient, customRender } from "../../test/customRender";
 import { screen, waitForElementToBeRemoved } from "@testing-library/react";
