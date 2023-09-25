@@ -17,10 +17,11 @@ export function CountryDetails() {
     return <p>Loading...</p>;
   }
 
+  if (error instanceof NotFoundError) {
+    return <p>Not Found</p>;
+  }
+
   if (error) {
-    if (error instanceof NotFoundError) {
-      return <p>Not Found</p>;
-    }
     return <p>Error</p>;
   }
 
