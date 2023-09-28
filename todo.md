@@ -2,8 +2,6 @@
 
 ## next
 
-- BE: get single country from DB
-- BE: more specific than `Prisma.JsonValue`?
 - mark country as visited
   - instead of updating the cache optimistically try displaying the state change in the UI
     - see https://tanstack.com/query/latest/docs/react/guides/optimistic-updates and https://tanstack.com/query/v5/docs/react/guides/optimistic-updates
@@ -29,6 +27,7 @@
 
 ## deprioritised
 
+- BE: more specific than `Prisma.JsonValue`?
 - FE: setup rtl as per docs https://testing-library.com/docs/react-testing-library/setup/
 - FE: display visited countries on a map
 - FE: lazy load images
