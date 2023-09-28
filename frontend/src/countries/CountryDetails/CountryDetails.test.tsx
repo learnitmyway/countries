@@ -1,16 +1,13 @@
 import { describe, expect, it } from "vitest";
 import { CountryDetails } from "./CountryDetails";
-import { createQueryClient, customRender } from "../../test/customRender";
+import { createQueryClient, customRender } from "@/test/customRender";
 import { screen, waitForElementToBeRemoved } from "@testing-library/react";
 import { countryKeys } from "../countryQueryKeys";
-import { buildCountry } from "../../test/builders/countryBuilder";
-import {
-  mockGetCountry404,
-  mockGetCountry500,
-} from "../../test/mocks/handlers";
+import { buildCountry } from "@/test/builders/countryBuilder";
+import { mockGetCountry404, mockGetCountry500 } from "@/test/mocks/handlers";
 import { QueryClient } from "@tanstack/react-query";
-import { setupMockServer } from "../../test/mocks/server";
-import { links, paths } from "../../App/routeUtils";
+import { setupMockServer } from "@/test/mocks/server";
+import { links, paths } from "@/App/routeUtils";
 
 describe("CountryDetails", () => {
   const mockServer = setupMockServer();

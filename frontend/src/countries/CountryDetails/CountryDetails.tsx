@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { joinList } from "../Countries/joinList";
 import { useCountry } from "./useCountry";
-import { NotFoundError } from "../../utils/NotFoundError";
+import { NotFoundError } from "@/utils/NotFoundError";
 
 interface RouteParams {
   cca2: string;
