@@ -19,8 +19,9 @@ export class CountriesController {
 
   @Get(':cca2')
   async getOne(@Param('cca2') cca2: string): Promise<Country> {
-    const countries = await this.prismaService.country.findMany({});
-    const country = countries.find((country) => country.cca2 === cca2);
+    const country = await this.prismaService.country.findFirst({
+      where: { cca2 },
+    });
     if (!country) {
       throw new HttpException('Not found', HttpStatus.NOT_FOUND);
     }
