@@ -5,35 +5,21 @@ import {
   HttpStatus,
   Param,
 } from '@nestjs/common';
-import * as data from './data.json';
-
-type Country = {
-  cca2: string;
-  capital?: string[];
-  currencies?: {
-    [code: string]: { name: string; symbol?: string };
-  };
-  flags: { png: string };
-  languages?: { [code: string]: string };
-  name: {
-    common: string;
-    nativeName?: { [code: string]: { common: string } };
-  };
-  population: number;
-  region: string;
-  subregion?: string;
-};
+import { PrismaService } from '../prisma.service';
+import { Country } from '@prisma/client';
 
 @Controller('countries')
 export class CountriesController {
+  constructor(private readonly prismaService: PrismaService) {}
+
   @Get()
-  getAll(): Country[] {
-    return data as Country[];
+  async getAll(): Promise<Country[]> {
+    return await this.prismaService.country.findMany({});
   }
 
   @Get(':cca2')
-  getOne(@Param('cca2') cca2: string): Country {
-    const countries = data as Country[];
+  async getOne(@Param('cca2') cca2: string): Promise<Country> {
+    const countries = await this.prismaService.country.findMany({});
     const country = countries.find((country) => country.cca2 === cca2);
     if (!country) {
       throw new HttpException('Not found', HttpStatus.NOT_FOUND);

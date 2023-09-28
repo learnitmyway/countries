@@ -1,33 +1,45 @@
 import { PrismaClient } from '@prisma/client';
+import * as data from './data.json';
 
 const prisma = new PrismaClient();
 
 async function main() {
-  const tableNames = ['users', 'profiles', 'posts'];
+  const tableNames = ['countries'];
   for (const tableName of tableNames)
     await prisma.$queryRawUnsafe(
       `Truncate "${tableName}" restart identity cascade;`,
     );
-  await prisma.user.create({
-    data: {
-      name: 'Alice',
-      email: 'alice@prisma.io',
-      posts: {
-        create: { title: 'Hello World' },
-      },
-      profile: {
-        create: { bio: 'I like turtles' },
-      },
-    },
-  });
-
-  const allUsers = await prisma.user.findMany({
-    include: {
-      posts: true,
-      profile: true,
-    },
-  });
-  console.dir(allUsers, { depth: null });
+  const countries = data;
+  for (const country of countries) {
+    const {
+      capital,
+      cca2,
+      currencies,
+      flags,
+      languages,
+      name,
+      population,
+      region,
+      subregion,
+    } = country;
+    await prisma.country.createMany({
+      data: [
+        {
+          capital,
+          cca2,
+          currencies,
+          flags,
+          languages,
+          name,
+          population,
+          region,
+          subregion,
+        },
+      ],
+    });
+  }
+  const countriesInDb = await prisma.country.findMany({});
+  console.dir(countriesInDb, { depth: null });
 }
 
 main()

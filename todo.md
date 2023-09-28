@@ -2,7 +2,9 @@
 
 ## next
 
-- store countries in db
+- should `prisma` be inside src?
+- BE: get single country from DB
+- BE: more specific than `Prisma.JsonValue`?
 - mark country as visited
   - instead of updating the cache optimistically try displaying the state change in the UI
     - see https://tanstack.com/query/latest/docs/react/guides/optimistic-updates and https://tanstack.com/query/v5/docs/react/guides/optimistic-updates
