@@ -68,3 +68,6 @@ This app isn't production ready:
 - sorting/filtering/searching can be done in the FE
 
 7. store countries in DB otherwise there are multiple data sources
+8. no @lukemorales/query-key-factory
+
+- I didn't understand the value
