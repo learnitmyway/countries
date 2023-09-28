@@ -1,18 +1,19 @@
 import { Countries } from "../countries/Countries/Countries";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { CountryDetails } from "../countries/CountryDetails/CountryDetails";
+import { paths } from "./routeUtils";
 
 export function Routes() {
   return (
     <Switch>
-      <Route path="/countries/:cca2">
+      <Route path={paths.countryDetails}>
         <CountryDetails />
       </Route>
-      <Route path="/countries">
+      <Route path={paths.countries}>
         <Countries />
       </Route>
       <Route exact path="/">
-        <Redirect to="/countries" />
+        <Redirect to={paths.countries} />
       </Route>
     </Switch>
   );

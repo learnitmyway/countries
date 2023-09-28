@@ -10,6 +10,7 @@ import {
 } from "../../test/mocks/handlers";
 import { QueryClient } from "@tanstack/react-query";
 import { setupMockServer } from "../../test/mocks/server";
+import { links, paths } from "../../App/routeUtils";
 
 describe("CountryDetails", () => {
   const mockServer = setupMockServer();
@@ -54,8 +55,8 @@ function setup({
   queryClient,
 }: { cca2?: string; queryClient?: QueryClient } = {}) {
   customRender(<CountryDetails />, {
-    route: `/countries/${cca2}`,
-    path: "/countries/:cca2",
+    route: links.countryDetails({ cca2 }),
+    path: paths.countryDetails,
     queryClient,
   });
 }

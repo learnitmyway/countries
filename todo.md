@@ -2,11 +2,6 @@
 
 ## next
 
-- FE: disallow it.only
-  - are there vitest eslint rules?
-- FE: extract routeUtils
-  - CountryDetails.test
-  - Routes
 - store countries in db
 - mark country as visited
   - instead of updating the cache optimistically try displaying the state change in the UI
