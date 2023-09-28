@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/shadcn/ui/card";
 import { Country } from "../types";
-import { joinList } from "./util";
+import { joinList } from "./joinList";
 
 export const CountryCard = ({ country }: { country: Country }) => (
   <Card className="w-[250px]">

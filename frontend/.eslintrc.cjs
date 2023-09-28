@@ -8,9 +8,18 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:react/jsx-runtime",
-    "plugin:vitest/recommended",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs", "prettier.config.cjs"],
+  overrides: [
+    {
+      files: ["*.test.*"],
+      plugins: ["vitest"],
+      extends: ["plugin:vitest/all"],
+      rules: {
+        "vitest/prefer-lowercase-title": "off",
+      },
+    },
+  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
@@ -18,7 +27,7 @@ module.exports = {
     project: ["./tsconfig.json", "./tsconfig.node.json"],
     tsconfigRootDir: __dirname,
   },
-  plugins: ["react-refresh", "@tanstack/query", "vitest"],
+  plugins: ["react-refresh", "@tanstack/query"],
   rules: {
     "no-console": "warn",
     "react-refresh/only-export-components": [
