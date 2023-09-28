@@ -44,7 +44,7 @@ This app isn't production ready:
 - see also scripts in `package.json`
 - interact with db `docker exec --tty --interactive countries-postgres-dev psql --host=localhost --username=postgres --dbname=countries-dev`
 
-## ADRs
+## Architecture Decision Records
 
 1. react-router-dom@5
 
@@ -71,3 +71,7 @@ This app isn't production ready:
 8. no @lukemorales/query-key-factory
 
 - I didn't understand the value
+
+10. should `prisma` be inside src?
+
+- it is [here](https://github.com/prisma/prisma-examples/tree/latest/typescript/rest-nestjs/prisma)

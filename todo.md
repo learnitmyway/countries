@@ -2,7 +2,6 @@
 
 ## next
 
-- should `prisma` be inside src?
 - BE: get single country from DB
 - BE: more specific than `Prisma.JsonValue`?
 - mark country as visited
