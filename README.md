@@ -46,32 +46,24 @@ This app isn't production ready:
 
 ## Architecture Decision Records
 
-1. react-router-dom@5
-
-- documentation of react-router-dom@6 was overwhelming
-
-2. no deno because I don't think there aren't many companies using it
+1. react-router-dom@6?
+   - no. Documentation is overwhelming
+   - use v5 instead
+2. deno?
+   - no. I don't know if it has enough traction to be worth learning yet.
 3. backend framework
-
-- choice: nestjs
-- alternative 1: nextjs instead. No, because I thought it would be too much new at once
-  - might be worth considering later
-- alternative 2: fastify. No because its motivation is performance that that isn't a priority
-
-4. no trpc because I think it's too new
-
-- might be worth considering if switching to nextjs
-
+   - choice: nestjs
+   - alternative 1: nextjs instead. No, because I thought it would be too much new at once
+     - might be worth considering later
+   - alternative 2: fastify. No, because its motivation is performance that that isn't a priority
+4. trpc?
+   - no. I think it's too new
+   - might be worth considering if switching to nextjs
 5. [where-should-the-backend-live](adr/where-should-the-backend-live.md)
-6. deprecated: no need to store countries in a DB because because it's only a read operation
-
-- sorting/filtering/searching can be done in the FE
-
+6. deprecated: ~~no need to store countries in a DB because because it's only a read operation~~
+   - ~~sorting/filtering/searching can be done in the FE~~
 7. store countries in DB otherwise there are multiple data sources
-8. no @lukemorales/query-key-factory
-
-- I didn't understand the value
-
-10. should `prisma` be inside src?
-
-- it is [here](https://github.com/prisma/prisma-examples/tree/latest/typescript/rest-nestjs/prisma)
+8. use `@lukemorales/query-key-factory`?
+   - no. I didn't understand the value
+9. Should `prisma` be inside src?
+   - no. It is isn't in [this example](https://github.com/prisma/prisma-examples/tree/latest/typescript/rest-nestjs/prisma)
