@@ -2,6 +2,7 @@
 
 ## next
 
+- FE: httpAdapter
 - mark country as visited
   - instead of updating the cache optimistically try displaying the state change in the UI
     - see https://tanstack.com/query/latest/docs/react/guides/optimistic-updates and https://tanstack.com/query/v5/docs/react/guides/optimistic-updates
