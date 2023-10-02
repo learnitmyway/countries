@@ -2,9 +2,14 @@
 
 ## next
 
+- read https://tkdodo.eu/blog/type-safe-react-query
+- FE: handle zod errors more gracefully?
+- FE: fail on console
+- FE: link back
+
 ## future
 
-- try zod https://tkdodo.eu/blog/type-safe-react-query
+- https://www.totaltypescript.com/tutorials/zod/zod-section/array/exercise
 - upgrade to @tanstack/react-query v5
   - mark country as visited https://tanstack.com/query/v5/docs/react/guides/optimistic-updates
 - share tsconfig, eslintrc between FE and BE
@@ -17,7 +22,6 @@
 - dark mode with shadcnui
 - detail page
   - link to border countries on detail page
-  - back
 - pnpm
 - auth
 - switch to nextjs (see decisions)
