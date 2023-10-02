@@ -8,6 +8,7 @@
     "build": "tsc && vite build",
     "coverage": "vitest run --coverage",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "pre-commit": "npm run typecheck && npm run lint",
     "preview": "vite preview",
     "test": "vitest",
     "test:ci": "vitest run",
