@@ -1,7 +1,7 @@
 import { Countries } from "../countries/Countries/Countries";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { CountryDetails } from "../countries/CountryDetails/CountryDetails";
-import { paths } from "@/utils/routeUtils";
+import { paths } from "./routeUtils";
 
 export function Routes() {
   return (
