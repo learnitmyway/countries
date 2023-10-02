@@ -25,7 +25,7 @@ export function CountryDetails() {
     return <p>Error</p>;
   }
 
-  // TODO: is there a way to avoid this check?
+  // TODO: is there a way to avoid this check? I don't know how it could be possible
   if (!country) {
     return null;
   }

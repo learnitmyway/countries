@@ -3,11 +3,10 @@
 ## next
 
 - read https://tkdodo.eu/blog/type-safe-react-query
-- FE: handle zod errors more gracefully?
 - FE: fail on console
 - FE: back link to /countries
-- FE: lint-staged
-- BE: lint-staged
+- FE: lint and typecheck staged files
+- BE: lint staged files
 
 ## future
 
@@ -31,12 +30,15 @@
 
 ## deprioritised
 
+- FE: handle zod errors more gracefully (ie by still displaying what was parsed)
+  - I can't return `[]` or `null` if there is an error parsing the response because this would be the empty state instead of the error state
 - BE: more specific than `Prisma.JsonValue`?
 - FE: setup rtl as per docs https://testing-library.com/docs/react-testing-library/setup/
 - FE: display visited countries on a map
 - FE: lazy load images
 - FE: responsiveness
 - BE: remove typechecking from test and start
+  - add typechecking to staged files
 - FE: get in-source testing to work
   - reverted commit: a07273d010865ffa9035fc9931b51110e1f4e033
   - Error: `Uncaught Error: Vitest failed to access its internal state.`
