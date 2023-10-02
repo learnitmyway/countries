@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const CountrySchema = z.object({
-  capital: z.array(z.string()).optional(),
+  capital: z.array(z.string()),
   cca2: z.string(),
   currencies: z
     .record(
@@ -10,12 +10,11 @@ export const CountrySchema = z.object({
         symbol: z.string().optional(),
       }),
     )
-    .optional()
     .nullable(),
   flags: z.object({
     png: z.string(),
   }),
-  languages: z.record(z.string()).optional().nullable(),
+  languages: z.record(z.string()).nullable(),
   name: z.object({
     common: z.string(),
     nativeName: z
@@ -28,7 +27,7 @@ export const CountrySchema = z.object({
   }),
   population: z.number(),
   region: z.string(),
-  subregion: z.string().optional().nullable(),
+  subregion: z.string().nullable(),
 });
 
 export const CountryListSchema = z.array(CountrySchema);

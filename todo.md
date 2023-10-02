@@ -2,14 +2,15 @@
 
 ## next
 
-- read https://tkdodo.eu/blog/type-safe-react-query
 - FE: fail on console
+- FE: nav bar to 'Home'
 - FE: back link to /countries
 - FE: lint and typecheck staged files
 - BE: lint staged files
 
 ## future
 
+- FE: try eslint-plugin-unicorn
 - https://www.totaltypescript.com/tutorials/zod/zod-section/array/exercise
 - upgrade to @tanstack/react-query v5
   - mark country as visited https://tanstack.com/query/v5/docs/react/guides/optimistic-updates
@@ -30,8 +31,7 @@
 
 ## deprioritised
 
-- FE: handle zod errors more gracefully (ie by still displaying what was parsed)
-  - I can't return `[]` or `null` if there is an error parsing the response because this would be the empty state instead of the error state
+- BE: respond with `undefined` instead of `null`?
 - BE: more specific than `Prisma.JsonValue`?
 - FE: setup rtl as per docs https://testing-library.com/docs/react-testing-library/setup/
 - FE: display visited countries on a map
