@@ -7,7 +7,7 @@ import { buildCountry } from "@/test/builders/countryBuilder";
 import { mockGetCountry404, mockGetCountry500 } from "@/test/mocks/handlers";
 import { QueryClient } from "@tanstack/react-query";
 import { setupMockServer } from "@/test/mocks/server";
-import { links, paths } from "@/App/routeUtils";
+import { links, paths } from "@/utils/routeUtils";
 
 describe("CountryDetails", () => {
   const mockServer = setupMockServer();

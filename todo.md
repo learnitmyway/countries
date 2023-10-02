@@ -2,9 +2,8 @@
 
 ## next
 
-- read https://tkdodo.eu/blog/type-safe-react-query
 - FE: fail on console
-- FE: back link to /countries
+- FE: nav bar to 'Home'
 - FE: lint and typecheck staged files
 - BE: lint staged files
 
@@ -30,7 +29,8 @@
 
 ## deprioritised
 
-- FE: handle zod errors more gracefully (ie by still displaying what was parsed)
+- FE: is there a better way to handle zod errors (ie instead of returning `json as Country`)?
+  - Without zod the type is unknown unless `as Country` is used
   - I can't return `[]` or `null` if there is an error parsing the response because this would be the empty state instead of the error state
 - BE: more specific than `Prisma.JsonValue`?
 - FE: setup rtl as per docs https://testing-library.com/docs/react-testing-library/setup/
