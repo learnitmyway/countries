@@ -5,7 +5,9 @@
 - read https://tkdodo.eu/blog/type-safe-react-query
 - FE: handle zod errors more gracefully?
 - FE: fail on console
-- FE: link back
+- FE: back link to /countries
+- FE: lint-staged
+- BE: lint-staged
 
 ## future
 

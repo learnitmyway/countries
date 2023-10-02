@@ -60,7 +60,7 @@ function Attribute({
   content,
 }: {
   title: string;
-  content?: string | number;
+  content?: string | number | null;
 }) {
   return (
     <p>

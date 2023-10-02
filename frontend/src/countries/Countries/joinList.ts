@@ -1,3 +1,3 @@
-export function joinList({ list }: { list?: string[] }) {
+export function joinList({ list }: { list?: string[] | null }) {
   return list?.join(", ") ?? "";
 }
