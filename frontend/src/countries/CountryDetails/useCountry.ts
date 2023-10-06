@@ -17,6 +17,6 @@ export function useCountry({ cca2 }: { cca2: string }) {
     },
     initialDataUpdatedAt: () =>
       queryClient.getQueryState(countryKeys.list())?.dataUpdatedAt,
-    staleTime: Infinity,
+    staleTime: Number.POSITIVE_INFINITY,
   });
 }

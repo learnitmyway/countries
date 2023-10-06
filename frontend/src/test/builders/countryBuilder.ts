@@ -17,6 +17,6 @@ export function buildCountry(): Country {
     region: "Europe",
     subregion: "Western Europe",
     languages: { fra: "French" },
-    population: 67391582,
+    population: 67_391_582,
   };
 }

@@ -8,6 +8,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:unicorn/all",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs", "prettier.config.cjs"],
   overrides: [
@@ -34,6 +35,9 @@ module.exports = {
       "warn",
       { allowConstantExport: true },
     ],
+    "unicorn/filename-case": "off",
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/no-keyword-prefix": "off",
   },
   settings: { react: { version: "detect" } },
 };

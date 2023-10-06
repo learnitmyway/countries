@@ -6,7 +6,7 @@ export function useCountries({ enabled = true } = {}) {
   return useQuery({
     queryKey: countryKeys.list(),
     queryFn: getAllCountries,
-    staleTime: Infinity,
+    staleTime: Number.POSITIVE_INFINITY,
     placeholderData: [],
     enabled,
   });

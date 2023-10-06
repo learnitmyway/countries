@@ -2,9 +2,6 @@
 
 ## next
 
-- FE: clean up card.tsx
-- FE: try eslint-plugin-unicorn
-
 ## future
 
 - FE: linting seems slow
@@ -15,6 +12,7 @@
   - share tsconfig, eslintrc between FE and BE
   - share types between FE and BE
   - see if anything can be reused from FE config files and vice versa
+    - eg eslint plugins
 - pagination
 - polling
 - search field with debounce

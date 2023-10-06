@@ -30,7 +30,7 @@ export function CountryDetails() {
 
   // TODO: is there a way to avoid this check? I don't know how it could be possible
   if (!country) {
-    return null;
+    return;
   }
 
   const nativeNames =
