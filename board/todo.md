@@ -2,7 +2,7 @@
 
 ## next
 
-- FE: nav bar to 'Home'
+- FE: clean up card.tsx
 - FE: try eslint-plugin-unicorn
 
 ## future

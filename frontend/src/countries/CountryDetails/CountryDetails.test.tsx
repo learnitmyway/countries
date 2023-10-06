@@ -11,6 +11,13 @@ import { links, paths } from "@/App/routeUtils";
 
 describe("CountryDetails", () => {
   const mockServer = setupMockServer();
+
+  it("renders back link", async () => {
+    setup();
+
+    await waitForElementToBeRemoved(() => screen.getByText("Loading..."));
+    expect(screen.getByText("Back")).toHaveAttribute("href", "/countries");
+  });
   it("fetches country and renders title", async () => {
     setup();
 

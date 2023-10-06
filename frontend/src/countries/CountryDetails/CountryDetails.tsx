@@ -2,6 +2,9 @@ import { useParams } from "react-router-dom";
 import { joinList } from "../Countries/joinList";
 import { useCountry } from "./useCountry";
 import { NotFoundError } from "@/utils/NotFoundError";
+import { LinkButton } from "@/shadcn/ui/button";
+import { ArrowLeft } from "lucide-react";
+import { links } from "../../App/routeUtils";
 
 interface RouteParams {
   cca2: string;
@@ -38,6 +41,9 @@ export function CountryDetails() {
 
   return (
     <main>
+      <LinkButton to={links.countries}>
+        <ArrowLeft className="mr-2 h-4 w-4" /> Back
+      </LinkButton>
       <h1 className="mb-2 text-xl">{country.name.common}</h1>
       <Attribute
         title="Native names"
