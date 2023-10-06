@@ -53,6 +53,7 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
-    "vitest": "^0.34.4"
+    "vitest": "^0.34.4",
+    "vitest-fail-on-console": "^0.5.1"
   }
 }
