@@ -1,7 +1,9 @@
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
+  "[javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+  },
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#ed7e4b",
     "activityBar.background": "#ed7e4b",
