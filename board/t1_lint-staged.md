@@ -1,0 +1,6 @@
+- t1: lint-staged https://github.com/okonet/lint-staged
+  - see attempt in stash
+  - husky doesn't work if there is no git directory (eg in `frontend`)
+  - run with `npx lint-staged` doesn't pick up tsconfig
+  - FE: lint and typecheck staged files
+  - BE: lint staged files
