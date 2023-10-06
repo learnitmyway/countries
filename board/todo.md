@@ -2,7 +2,6 @@
 
 ## next
 
-- FE: fail on console
 - FE: nav bar to 'Home'
 - FE: try eslint-plugin-unicorn
 
@@ -15,6 +14,7 @@
 - read https://www.yieldcode.blog/post/npm-workspaces/
   - share tsconfig, eslintrc between FE and BE
   - share types between FE and BE
+  - see if anything can be reused from FE config files and vice versa
 - pagination
 - polling
 - search field with debounce
@@ -30,6 +30,7 @@
 
 ## deprioritised
 
+- BE: fail on console
 - BE: respond with `undefined` instead of `null`?
 - BE: more specific than `Prisma.JsonValue`?
 - FE: setup rtl as per docs https://testing-library.com/docs/react-testing-library/setup/
@@ -39,3 +40,4 @@
 - BE: remove typechecking from test and start
 - t1: lint-staged
 - t2: in-source-testing
+- t3: FE: fail-on-console
