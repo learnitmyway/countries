@@ -2,6 +2,7 @@ import { Country } from "src/countries/types";
 
 export function buildCountry(): Country {
   return {
+    id: 1,
     name: {
       common: "France",
       nativeName: {
