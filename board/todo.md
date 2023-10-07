@@ -2,7 +2,6 @@
 
 ## next
 
-- t7 e2e type-safety
 - response with `{data: countries}`
 
 ## future
@@ -11,6 +10,7 @@
 - run app locally with docker using production builds
 - FE: linting seems slow
 - t4: npm workspace
+- t7: e2e type-safety
 - pagination
 - polling
 - search field with debounce
