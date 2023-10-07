@@ -1,10 +1,12 @@
 import { get } from "../utils/httpAdapter";
-import { Country } from "./types";
+import { Country, CountryListSchema, CountrySchema } from "./types";
 
 const BASE_URL = "http://localhost:3000/countries";
 
 export const getAllCountries = async (): Promise<Country[]> => {
-  return await get({ url: BASE_URL });
+  const json = await get({ url: BASE_URL });
+
+  return CountryListSchema.parse(json);
 };
 
 export function getCountryUrl({ cca2 }: { cca2: string }) {
@@ -16,5 +18,6 @@ export const getCountry = async ({
 }: {
   cca2: string;
 }): Promise<Country> => {
-  return await get({ url: getCountryUrl({ cca2 }) });
+  const json = await get({ url: getCountryUrl({ cca2 }) });
+  return CountrySchema.parse(json);
 };

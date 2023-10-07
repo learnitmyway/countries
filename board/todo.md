@@ -5,15 +5,22 @@
 ## future
 
 - FE: linting seems slow
-- t4: npm workspace
+- https://www.totaltypescript.com/tutorials/zod/zod-section/array/exercise
+- upgrade to @tanstack/react-query v5
+  - mark country as visited https://tanstack.com/query/v5/docs/react/guides/optimistic-updates
+- read https://www.yieldcode.blog/post/npm-workspaces/
+  - share tsconfig, eslintrc between FE and BE
+  - share types between FE and BE
+  - see if anything can be reused from FE config files and vice versa
+    - eg eslint plugins
 - pagination
 - polling
 - search field with debounce
 - filter by region
 - sort countries
 - dark mode with shadcnui
-- upgrade to @tanstack/react-query v5
-  - mark country as visited https://tanstack.com/query/v5/docs/react/guides/optimistic-updates
+- detail page
+  - link to border countries on detail page
 - pnpm
 - auth
 - switch to nextjs (see decisions)
@@ -21,9 +28,9 @@
 
 ## deprioritised
 
-- FE: link to border countries on detail page
 - BE: fail on console
 - BE: respond with `undefined` instead of `null`?
+- BE: more specific than `Prisma.JsonValue`?
 - FE: setup rtl as per docs https://testing-library.com/docs/react-testing-library/setup/
 - FE: display visited countries on a map
 - FE: lazy load images
@@ -32,4 +39,3 @@
 - t1: lint-staged
 - t2: in-source-testing
 - t3: FE: fail-on-console
-- t5: BE: more specific than `Prisma.JsonValue`?
