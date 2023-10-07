@@ -2,7 +2,7 @@
 
 ## next
 
-- (in progress) t7
+- t7 e2e type-safety
 - response with `{data: countries}`
 
 ## future

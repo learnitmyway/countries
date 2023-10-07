@@ -1,5 +1,7 @@
 # Shared types
 
+superseded by t7
+
 ## decisions
 
 - Revert commit 37cb5d7

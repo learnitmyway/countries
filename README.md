@@ -59,7 +59,7 @@ This app isn't production ready:
 4. trpc?
    - no. I think it's too new
    - might be worth considering if switching to nextjs
-5. [where-should-the-backend-live](adr/where-should-the-backend-live.md)
+5. [Where should the backend live?](adr/5_where-should-the-backend-live.md)
 6. deprecated: ~~no need to store countries in a DB because because it's only a read operation~~
    - ~~sorting/filtering/searching can be done in the FE~~
 7. store countries in DB otherwise there are multiple data sources
@@ -67,3 +67,4 @@ This app isn't production ready:
    - no. I didn't understand the value
 9. Should `prisma` be inside src?
    - no. It is isn't in [this example](https://github.com/prisma/prisma-examples/tree/latest/typescript/rest-nestjs/prisma)
+10. use zod for validation at runtime
