@@ -8,7 +8,7 @@ import {
   LanguagesSchema,
   NameSchema,
 } from './schemas';
-import { replaceNullWithUndefined } from '../util/nullToUndefined';
+import { replaceNullWithUndefined } from '../util/replaceNullWithUndefined';
 
 @Injectable()
 export class CountriesService {
