@@ -2,7 +2,7 @@
 
 ## next
 
-- t7
+- (in progress) t7
 - response with `{data: countries}`
 
 ## future
