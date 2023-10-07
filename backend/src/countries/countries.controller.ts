@@ -5,28 +5,23 @@ import {
   HttpStatus,
   Param,
 } from '@nestjs/common';
-import { PrismaService } from '../prisma.service';
-import { CountryListSchema, CountrySchema } from './schemas';
+import { CountriesService } from './countries.service';
 
 @Controller('countries')
 export class CountriesController {
-  constructor(private readonly prismaService: PrismaService) {}
+  constructor(private readonly countriesService: CountriesService) {}
 
   @Get()
-  async getAll() {
-    const countries = await this.prismaService.country.findMany({});
-
-    return CountryListSchema.parse(countries);
+  getAll() {
+    return this.countriesService.getAll();
   }
 
   @Get(':cca2')
   async getOne(@Param('cca2') cca2: string) {
-    const country = await this.prismaService.country.findFirst({
-      where: { cca2 },
-    });
+    const country = await this.countriesService.getOne({ cca2 });
     if (!country) {
       throw new HttpException('Not found', HttpStatus.NOT_FOUND);
     }
-    return CountrySchema.parse(country);
+    return country;
   }
 }

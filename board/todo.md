@@ -2,14 +2,15 @@
 
 ## next
 
+- t7
 - response with `{data: countries}`
 
 ## future
 
+- BE: separate countries.module?
 - run app locally with docker using production builds
 - FE: linting seems slow
 - t4: npm workspace
-- t5: BE: more specific than `Prisma.JsonValue`?
 - pagination
 - polling
 - search field with debounce
@@ -32,3 +33,4 @@
 - t1: lint-staged
 - t2: in-source-testing
 - t3: FE: fail-on-console
+- t5: BE: more specific than `Prisma.JsonValue`?
