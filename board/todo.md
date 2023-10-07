@@ -25,6 +25,7 @@
 
 ## deprioritised
 
+- BE: separate prettier from linter
 - FE: link to border countries on detail page
 - BE: fail on console
 - FE: setup rtl as per docs https://testing-library.com/docs/react-testing-library/setup/

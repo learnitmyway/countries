@@ -16,7 +16,7 @@ export class CountriesService {
 
   async getAll() {
     const countries = await this.prismaService.country.findMany({});
-    return countries.map(toCountry);
+    return countries.map((element) => toCountry(element));
   }
 
   async getOne({ cca2 }: { cca2: string }) {

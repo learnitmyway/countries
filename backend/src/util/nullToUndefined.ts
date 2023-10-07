@@ -6,7 +6,7 @@ export function replaceNullWithUndefined<T extends object>(obj: T) {
 
 function nullToUndefined<T>(value: T | null) {
   if (value === null) {
-    return undefined;
+    return;
   }
   return value;
 }

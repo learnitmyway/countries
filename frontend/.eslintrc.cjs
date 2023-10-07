@@ -36,8 +36,8 @@ module.exports = {
       { allowConstantExport: true },
     ],
     "unicorn/filename-case": "off",
-    "unicorn/prevent-abbreviations": "off",
     "unicorn/no-keyword-prefix": "off",
+    "unicorn/prevent-abbreviations": "off",
   },
   settings: { react: { version: "detect" } },
 };

@@ -10,6 +10,5 @@ Using zod instead of Omit was a good step in 298cce4 because the type is at leas
 
 ## todo
 
-- BE: eslint unicorn
 - fix BE tests
 - write ADR
