@@ -1,21 +1,55 @@
 import { Injectable } from '@nestjs/common';
 import { Country } from '../types/countries';
 import { PrismaService } from '../prisma.service';
-import { CountryListSchema, CountrySchema } from './schemas';
+import { Country as DbCountry } from '@prisma/client';
+import {
+  CurrenciesSchema,
+  FlagsSchema,
+  LanguagesSchema,
+  NameSchema,
+} from './schemas';
 
 @Injectable()
 export class CountriesService {
   constructor(private readonly prismaService: PrismaService) {}
 
-  async getAll(): Promise<Country[]> {
+  async getAll() {
     const countries = await this.prismaService.country.findMany({});
-    return CountryListSchema.parse(countries);
+    return countries.map(toCountry);
   }
 
-  async getOne({ cca2 }: { cca2: string }): Promise<Country> {
+  async getOne({ cca2 }: { cca2: string }) {
     const country = await this.prismaService.country.findFirst({
       where: { cca2 },
     });
-    return CountrySchema.parse(country);
+    if (country) {
+      return toCountry(country);
+    }
+    return null;
   }
+}
+
+function toCountry(country: DbCountry): Country {
+  const {
+    capital,
+    cca2,
+    currencies,
+    flags,
+    languages,
+    name,
+    population,
+    region,
+    subregion,
+  } = country;
+  return {
+    capital,
+    cca2,
+    currencies: CurrenciesSchema.parse(currencies),
+    flags: FlagsSchema.parse(flags),
+    languages: LanguagesSchema.parse(languages),
+    name: NameSchema.parse(name),
+    population,
+    region,
+    subregion,
+  };
 }
