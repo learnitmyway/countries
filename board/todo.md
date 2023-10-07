@@ -2,13 +2,12 @@
 
 ## next
 
-- zod in BE as mapper
+- response with `{data: countries}`
 
 ## future
 
 - run app locally with docker using production builds
 - FE: linting seems slow
-- t6: shared types
 - t4: npm workspace
 - t5: BE: more specific than `Prisma.JsonValue`?
 - pagination
@@ -27,7 +26,6 @@
 
 - FE: link to border countries on detail page
 - BE: fail on console
-- BE: respond with `undefined` instead of `null`?
 - FE: setup rtl as per docs https://testing-library.com/docs/react-testing-library/setup/
 - FE: display visited countries on a map
 - FE: lazy load images

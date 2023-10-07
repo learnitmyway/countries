@@ -6,26 +6,27 @@ import {
   Param,
 } from '@nestjs/common';
 import { PrismaService } from '../prisma.service';
-import { Country } from '@prisma/client';
+import { CountryListSchema, CountrySchema } from './schemas';
 
 @Controller('countries')
 export class CountriesController {
   constructor(private readonly prismaService: PrismaService) {}
 
   @Get()
-  async getAll(): Promise<Country[]> {
-    return await this.prismaService.country.findMany({});
+  async getAll() {
+    const countries = await this.prismaService.country.findMany({});
+
+    return CountryListSchema.parse(countries);
   }
 
   @Get(':cca2')
-  async getOne(@Param('cca2') cca2: string): Promise<Country> {
+  async getOne(@Param('cca2') cca2: string) {
     const country = await this.prismaService.country.findFirst({
       where: { cca2 },
     });
     if (!country) {
       throw new HttpException('Not found', HttpStatus.NOT_FOUND);
     }
-
-    return country;
+    return CountrySchema.parse(country);
   }
 }
