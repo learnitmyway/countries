@@ -6,10 +6,10 @@ Using zod instead of Omit was a good step in 298cce4 because the type is at leas
 
 - service layer
 - only use zod for `JsonValue`s
+- replace null with undefined
 
 ## todo
 
-- rename to schema.zod.ts
-- map null to undefined
+- BE: eslint unicorn
 - fix BE tests
 - write ADR

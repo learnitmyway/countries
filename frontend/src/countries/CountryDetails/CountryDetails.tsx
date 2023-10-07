@@ -66,7 +66,7 @@ function Attribute({
   content,
 }: {
   title: string;
-  content?: string | number | null;
+  content?: string | number;
 }) {
   return (
     <p>

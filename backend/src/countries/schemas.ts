@@ -7,13 +7,13 @@ export const CurrenciesSchema = z
       symbol: z.string().optional(),
     }),
   )
-  .nullable();
+  .optional();
 
 export const FlagsSchema = z.object({
   png: z.string(),
 });
 
-export const LanguagesSchema = z.record(z.string()).nullable();
+export const LanguagesSchema = z.record(z.string()).optional();
 
 export const NameSchema = z.object({
   common: z.string(),

@@ -15,5 +15,5 @@ export type Country = {
   name: z.infer<typeof NameSchema>;
   population: number;
   region: string;
-  subregion: string | null;
+  subregion?: string;
 };

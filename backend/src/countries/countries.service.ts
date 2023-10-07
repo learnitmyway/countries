@@ -8,6 +8,7 @@ import {
   LanguagesSchema,
   NameSchema,
 } from './schemas';
+import { replaceNullWithUndefined } from '../util/nullToUndefined';
 
 @Injectable()
 export class CountriesService {
@@ -25,7 +26,7 @@ export class CountriesService {
     if (country) {
       return toCountry(country);
     }
-    return null;
+    return;
   }
 }
 
@@ -40,7 +41,7 @@ function toCountry(country: DbCountry): Country {
     population,
     region,
     subregion,
-  } = country;
+  } = replaceNullWithUndefined(country);
   return {
     capital,
     cca2,
