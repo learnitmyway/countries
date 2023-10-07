@@ -2,7 +2,7 @@
 
 ## next
 
-- 
+- zod in BE as mapper
 
 ## future
 
