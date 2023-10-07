@@ -3,8 +3,6 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      // TODO: replace in t4
-      "@backend/src/types/*": ["../backend/src/types/*"]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,

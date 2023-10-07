@@ -10,5 +10,7 @@ Using zod instead of Omit was a good step in 298cce4 because the type is at leas
 
 ## todo
 
+- why is circle ci linting differently to vscode and npm scripts and why is the typecheck different for npm scripts compared to circle ci and vscode?
+  - is it the BE import from the FE?
 - fix BE tests
 - write ADR
