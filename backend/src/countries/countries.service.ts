@@ -1,13 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import {
-  Country,
-  Currencies,
-  Flags,
-  Languages,
-  Name,
-} from '../types/countries';
+import { Country } from '../types/countries';
 import { PrismaService } from '../prisma.service';
-import { Country as DbCountry } from '@prisma/client';
+import { CountryListSchema, CountrySchema } from './schemas';
 
 @Injectable()
 export class CountriesService {
@@ -15,43 +9,13 @@ export class CountriesService {
 
   async getAll(): Promise<Country[]> {
     const countries = await this.prismaService.country.findMany({});
-    return countries.map(mapCountry);
+    return CountryListSchema.parse(countries);
   }
 
-  async getOne({ cca2 }: { cca2: string }): Promise<Country | null> {
+  async getOne({ cca2 }: { cca2: string }): Promise<Country> {
     const country = await this.prismaService.country.findFirst({
       where: { cca2 },
     });
-    if (country) {
-      return mapCountry(country);
-    }
-
-    return null;
+    return CountrySchema.parse(country);
   }
-}
-
-function mapCountry(country: DbCountry): Country {
-  const {
-    capital,
-    cca2,
-    currencies,
-    flags,
-    languages,
-    name,
-    population,
-    region,
-    subregion,
-  } = country;
-  return {
-    capital,
-    cca2,
-    // TODO: remove in t5
-    currencies: currencies as Currencies,
-    flags: flags as Flags,
-    languages: languages as Languages,
-    name: name as Name,
-    population,
-    region,
-    subregion,
-  };
 }
