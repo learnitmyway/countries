@@ -6,6 +6,9 @@
 
 ## future
 
+- upgrade to @tanstack/react-query v5
+  - https://tanstack.com/query/v5/docs/react/guides/migrating-to-v5
+  - mark country as visited https://tanstack.com/query/v5/docs/react/guides/optimistic-updates
 - BE: separate countries.module?
 - run app locally with docker using production builds
 - FE: linting seems slow
@@ -17,8 +20,6 @@
 - filter by region
 - sort countries
 - dark mode with shadcnui
-- upgrade to @tanstack/react-query v5
-  - mark country as visited https://tanstack.com/query/v5/docs/react/guides/optimistic-updates
 - pnpm
 - auth
 - switch to nextjs (see decisions)
