@@ -4,7 +4,7 @@ An app that displays country data using technology that I like or want to try.
 
 Original data is from https://restcountries.com/v3.1/all, September 2023.
 
-## disclaimer
+## Disclaimer
 
 This app isn't production ready:
 
@@ -13,33 +13,33 @@ This app isn't production ready:
 - test coverage is low
 - UX is almost completely absent in some places
 
-## frontend
+## Frontend
 
 - `cd frontend`
 
-### setup
+### Setup
 
 - `npm install`
 - Generate new component (eg button) with `npx shadcn-ui@latest add button`
 
-### useful commands
+### Useful commands
 
 - `npm run dev`
 - `npm test`
 - see also scripts in `package.json`
 
-## backend
+## Backend
 
 - `cd backend`
 
-### setup
+### Setup
 
 - `cp .env.example .env`
 - `npm install`
 - start db with `docker-compose up -d`
 - `npm run db:reset`
 
-### useful commands
+### Useful commands
 
 - `npm run start:dev`
 - `npm test`
