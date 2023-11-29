@@ -4,6 +4,8 @@ An app that displays country data using technology that I like or want to try.
 
 Original data is from https://restcountries.com/v3.1/all, September 2023.
 
+## disclaimer
+
 This app isn't production ready:
 
 - it only works on localhost
